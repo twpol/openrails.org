@@ -1,0 +1,57 @@
+toc:
+  - title: Discover
+    subfolderitems:
+      - page: Open Rails
+        url: /discover/open-rails/
+      - page: Our Mission
+        url: /discover/our-mission/
+      - page: Our Plans
+        url: /discover/our-plans/
+      - page: Version 1.3
+        url: /discover/version-1-3/
+      - page: Project Team
+        url: /discover/project-team/
+      - page: News
+        url: /discover/news/
+      - page: License
+        url: /discover/license/
+  - title: Download
+    subfolderitems:
+      - page: Program
+        url: /download/program/
+      - page: Source
+        url: /download/source/
+      - page: Changes
+        url: /download/changes/
+      - page: Content
+        url: /download/content/
+  - title: Learn
+    subfolderitems:
+      - page: FAQ
+        url: /learn/faq/
+      - page: Manual and Tutorials
+        url: /learn/manual-and-tutorials/
+  - title: Share
+    subfolderitems:
+      - page: Gallery
+        url: /share/gallery/
+      - page: Community
+        url: /share/community/
+      - page: Multi-Player
+        url: /share/multiplayer/
+  - title: Contribute
+    subfolderitems:
+      - page: Reporting Bugs
+        url: /contribute/reporting-bugs
+      - page: Building Models
+        url: /contribute/building-models
+      - page: Developing Code
+        url: /contribute/developing-code
+      - page: Joining the Team
+        url: /contribute/joining-the-team
+      - page: Credits
+        url: /contribute/credits
+  - title: Trade
+    url: /trade/
+  - title: Contact
+    url: /contact/

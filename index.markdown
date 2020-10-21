@@ -1,5 +1,6 @@
 ---
 layout: index
+title: Open Rails - Free train simulator project
 download_stable: OpenRails-1.3.1-Setup.exe
 download_date: 08 December 2018
 download_size: 44MB

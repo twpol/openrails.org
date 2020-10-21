@@ -1,8 +1,12 @@
 <head>
+  {%- if include.index -%}
+  <title>{{ page.title }}</title>
+  {%- else -%}
   {%- if page.section -%}
   <title>{{ page.title }} - {{ page.section }} - Open Rails</title>
   {%- else -%}
   <title>{{ page.title }} - Open Rails</title>
+  {%- endif -%}
   {%- endif -%}
   {%- seo title=false -%}
   {%- feed_meta -%}

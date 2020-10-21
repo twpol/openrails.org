@@ -20,7 +20,7 @@ download_size: 44MB
       <!-- Button to trigger modal -->
       <a href="#modal1" role="button" class='btn download_button' data-toggle="modal">
         <span class='glyphicon glyphicon-download'></span>&nbsp; Download the installer
-        {{ page.download_date }}, {{ page.download_size }}
+        ({{ page.download_date }}, {{ page.download_size }})
                   </a>
     </div>
   </div>

@@ -1,6 +1,6 @@
 ---
 layout: default
-section: Discover 
+section: Discover
 title: Open Rails
 ---
 

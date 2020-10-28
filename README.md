@@ -7,6 +7,10 @@ GitHub Pages. It is already live on
 To-do list:
 
 - [ ] Download pages and links
+- [ ] Investigate storage for large files (e.g. Git LFS)
+  - [ ] DemoModel1.zip
+  - [ ] Open Rails installer
+  - [ ] PDF documents
 - [ ] Code changes
 - [ ] Contact form
 - [ ] Randomized banners

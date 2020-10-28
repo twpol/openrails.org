@@ -7,6 +7,7 @@ GitHub Pages. It is already live on
 To-do list:
 
 - [ ] Download pages and links
+- [ ] Code changes
 - [ ] Contact form
 - [ ] Randomized banners
 - [ ] Changes since last visit (will likely remove)

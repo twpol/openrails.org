@@ -2,6 +2,7 @@
 layout: default
 section: Discover
 title: Our Plans
+use_iframe: true
 ---
 
 <div class="row">

@@ -1,10 +1,62 @@
 <div class="row">
   <div class="col-md-12">
-    <!-- TODO randomize this -->
-    <img class="banner" src="/assets/banners/banner000.jpg">
-    <a href="/">
+    <img class="banner" src="/assets/banners/banner000.jpg"><a href="/">
       <img class="logo" src='/assets/logos/or_logo.png' alt="Logo for Open Rails">
       <span class="logo_text">Open Rails</span>
-    </a>
+    </a><a href="#" title="Click for another picture">
+        <span class="glyphicon glyphicon-chevron-right next_banner"></span>
+    </a><script type="text/javascript">
+(async function(){
+const banner = document.currentScript.previousSibling.previousSibling.previousSibling;
+const another = document.currentScript.previousSibling;
+
+const show = () => {
+    const curImage = sessionStorage.getItem("or_banner_image");
+    const curTitle = sessionStorage.getItem("or_banner_title");
+    const curSupplier = sessionStorage.getItem("or_banner_supplier");
+    if ([curImage, curTitle, curSupplier].every(x => x !== null)) {
+        banner.src = curImage;
+        banner.title = `${curTitle}\nposted by ${curSupplier}`;
+    }
+};
+const loadJson = async (url) => new Promise((resolve, reject) => {
+    const req = new XMLHttpRequest();
+    req.open("GET", url);
+    req.addEventListener("load", (e) => {
+        resolve(req.response);
+    });
+    req.addEventListener("error", reject);
+    req.addEventListener("abort", reject);
+    req.responseType = "json";
+    req.send();
+});
+
+/* Load the current banner, as stored in the cookies, immediately.
+ * It takes a visibly long time for the browser to load the banner list,
+ * even when it's already cached. */
+show();
+
+const list = await loadJson("/assets/banners/banner_list.json");
+const pick = (l) => l[Math.floor(Math.random() * l.length)];
+const next = () => {
+    const b = pick(list);
+    const path = `/assets/banners/${b["image"]}`;
+    sessionStorage.setItem("or_banner_image", path);
+    sessionStorage.setItem("or_banner_title", b["title"]);
+    sessionStorage.setItem("or_banner_supplier", b["supplier"]);
+
+    // Preload the next banner.
+    new Image().src = path;
+};
+
+another.addEventListener("click", (e) => {
+    show();
+    next();
+    e.preventDefault();
+});
+
+next();
+})();
+    </script>
   </div>
 </div>

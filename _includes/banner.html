@@ -9,15 +9,23 @@
 (async function(){
 const banner = document.currentScript.previousSibling.previousSibling.previousSibling;
 const another = document.currentScript.previousSibling;
+let session;
+try {
+    session = sessionStorage;
+} catch {
+    session = undefined;
+}
 
 const show = () => {
-    const curImage = sessionStorage.getItem("or_banner_image");
-    const curTitle = sessionStorage.getItem("or_banner_title");
-    const curSupplier = sessionStorage.getItem("or_banner_supplier");
-    if ([curImage, curTitle, curSupplier].every(x => x !== null)) {
-        banner.src = curImage;
-        banner.title = `${curTitle}\nposted by ${curSupplier}`;
-    }
+    if (session === undefined)
+        return;
+    const curImage = session.getItem("or_banner_image");
+    const curTitle = session.getItem("or_banner_title");
+    const curSupplier = session.getItem("or_banner_supplier");
+    if ([curImage, curTitle, curSupplier].some(x => x === null))
+        return;
+    banner.src = curImage;
+    banner.title = `${curTitle}\nposted by ${curSupplier}`;
 };
 const loadJson = async (url) => new Promise((resolve, reject) => {
     const req = new XMLHttpRequest();
@@ -39,11 +47,13 @@ show();
 const list = await loadJson("/assets/banners/banner_list.json");
 const pick = (l) => l[Math.floor(Math.random() * l.length)];
 const next = () => {
+    if (session === undefined)
+        return;
     const b = pick(list);
     const path = `/assets/banners/${b["image"]}`;
-    sessionStorage.setItem("or_banner_image", path);
-    sessionStorage.setItem("or_banner_title", b["title"]);
-    sessionStorage.setItem("or_banner_supplier", b["supplier"]);
+    session.setItem("or_banner_image", path);
+    session.setItem("or_banner_title", b["title"]);
+    session.setItem("or_banner_supplier", b["supplier"]);
 
     // Preload the next banner.
     new Image().src = path;

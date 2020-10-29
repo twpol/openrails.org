@@ -13,7 +13,6 @@ GitHub Pages. It is already live on
   - [ ] PDF documents
 - [ ] Code changes
 - [ ] Randomized banners
-- [ ] OpenHub stats in the footer
 - [ ] Menu should indicate current section/page
 
 ### Changes from the PHP version

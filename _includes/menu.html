@@ -8,12 +8,20 @@
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
+      {% if page.layout == "homepage" %}
+      <li class="active">
+      {% else %}
       <li>
+      {% endif %}
         <a href="/">Home</a>
       </li>
       {% for item in site.data.menu.toc %}
       {% if item.subfolderitems %}
+      {% if page.section == item.title %}
+      <li class="active dropdown">
+      {% else %}
       <li class="dropdown">
+      {% endif %}
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }} <b class="caret"></b></a>
         <ul class="dropdown-menu">
           {% for entry in item.subfolderitems %}
@@ -21,7 +29,11 @@
           {% endfor %}
         </ul>
       {% else %}
+      {% if page.title == item.title %}
+      <li class="active">
+      {% else %}
       <li>
+      {% endif %}
         <a href="{{ item.url }}">{{ item.title }}</a>
       {% endif %}
       </li>

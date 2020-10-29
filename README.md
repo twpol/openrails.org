@@ -12,7 +12,6 @@ GitHub Pages. It is already live on
   - [ ] Open Rails installer
   - [ ] PDF documents
 - [ ] Code changes
-- [ ] Menu should indicate current section/page
 
 ### Changes from the PHP version
 

@@ -12,7 +12,6 @@ GitHub Pages. It is already live on
   - [ ] Open Rails installer
   - [ ] PDF documents
 - [ ] Code changes
-- [ ] Contact form
 - [ ] Randomized banners
 - [ ] Changes since last visit (will likely remove)
 - [ ] OpenHub stats in the footer

@@ -8,10 +8,8 @@ const another = document.currentScript.previousSibling;
 const iframe = another.getElementsByTagName("iframe")[0];
 
 const current = () => {
-    const r = document.cookie
-        .split("; ")
-        .find(row => row.startsWith("ohloh_snippet"));
-    return r === undefined ? 0 : parseInt(r.split("=")[1]);
+    const v = sessionStorage.getItem("or_ohloh_snippet");
+    return v === null ? 0 : parseInt(v);
 };
 const show = () => {
     switch (current())
@@ -28,10 +26,7 @@ const show = () => {
             break;
     }
 };
-const next = () => {
-    const s = (current() + 1) % 3;
-    document.cookie = "ohloh_snippet=" + s;
-};
+const next = () => sessionStorage.setItem("or_ohloh_snippet", (current() + 1) % 3);
 
 another.addEventListener("click", (e) => {
     show();

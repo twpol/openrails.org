@@ -1,5 +1,5 @@
 <head>
-  {%- if include.index -%}
+  {%- if include.homepage -%}
   <title>{{ page.title }}</title>
   {%- else -%}
   {%- if page.section -%}
@@ -18,8 +18,8 @@
   {%- endif -%}
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="{{ "/assets/template.css" | relative_url }}">
-  {%- if include.index -%}
-  <link rel="stylesheet" href="{{ "/assets/index.css" | relative_url }}">
+  {%- if include.homepage -%}
+  <link rel="stylesheet" href="{{ "/assets/homepage.css" | relative_url }}">
   {%- endif -%}
   {%- if page.use_accordion -%}
   <link rel="stylesheet" href="{{ "/assets/accordion/accordion.css" | relative_url }}" >

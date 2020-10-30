@@ -13,11 +13,11 @@
   font-style: normal;
   font-weight: 400;
   src: local("Ubuntu"), 
-       url("http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_xyN3apAT_yRRDeqB3sPRg.woff")
+       url("https://themes.googleusercontent.com/static/fonts/ubuntu/v5/_xyN3apAT_yRRDeqB3sPRg.woff")
 	   format("woff");
 }
 
-body {  /* Free community content from http://wallpaperswide.com/railroad_tracks-wallpapers.html*/ 
+body {  /* Free community content from https://wallpaperswide.com/railroad_tracks-wallpapers.html*/ 
   font-family: Ubuntu, 'Liberation Sans', sans-serif;
   -ms-overflow-style: scrollbar; /* To cancel auto-hiding in IEv10 */
   background: url('/assets/rail.jpg') no-repeat center center fixed; 

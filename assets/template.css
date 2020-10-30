@@ -61,7 +61,7 @@ hr {
 }
 p a, div.row ul li a, h2 a, h5 a { /* div.row to exclude navbar */
 	color: rgb(80, 128, 40);
-	text-decoration: underline !important;
+	text-decoration: underline;
 }
 
 ul {

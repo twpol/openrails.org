@@ -18,6 +18,7 @@ GitHub Pages. It is already live on
 - We cannot read file sizes or modification times on GitHub Pages, so we 
   manually populate this data with JSON files.
 - Banner and Open Hub randomization now require JavaScript to be enabled.
-- The "Changes since last visit" feature has been removed.
+- The "Changes since last visit" and "Website Statistics" features have been 
+  removed.
 - The contact form no longer sends the IP address and HTTP referer of the 
   sender. This information needs to be retrieved by @cjakeman's CGI program.

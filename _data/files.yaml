@@ -1,0 +1,28 @@
+stable_installer:
+  url: http://openrails.org/files/OpenRails-1.3.1-Setup.exe
+  date: 2018-12-08
+  bytes: 45757016
+testing_manual:
+  url: http://openrails.org/files/OpenRails-Testing-Manual.pdf
+  date: 2020-05-01
+  bytes: 24434898
+doc_german_keyboards:
+  url: /assets/files/Keyboard_Layout_DE_V1.3.1e.pdf
+  date: 2013-07-31
+  bytes: 452861
+doc_signaling:
+  url: /assets/files/signalling_operational.pdf
+  date: 2013-03-21
+  bytes: 80656
+doc_trackviewer:
+  url: /assets/files/ORTS_Trackviewer_manual.pdf
+  date: 2014-07-19
+  bytes: 840438
+doc_steam:
+  url: /assets/files/OR_Steam Model_03_02_2014.pdf
+  date: 2014-03-02
+  bytes: 313800
+doc_curves:
+  url: /assets/files/superelevation_v1.pdf
+  date: 2014-06-03
+  bytes: 126282

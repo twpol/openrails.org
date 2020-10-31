@@ -2,8 +2,6 @@
 layout: default
 section: Learn
 title: Manual and Tutorials
-manual_path: /assets/files/OpenRails-Testing-Manual.pdf
-manual_date: 2020-05-01
 ---
 
 <div class="row">
@@ -11,7 +9,7 @@ manual_date: 2020-05-01
     <div class="col-md-4">
         <h2>Manual</h2>
         <p>
-            Each download includes a copy of the Operating Manual. For convenience, you can also directly <a href='{{ page.manual_path }}'>download the manual</a> ({{ page.manual_date | date: "%d %B %Y" }}).
+            Each download includes a copy of the Operating Manual. For convenience, you can also directly <a href='{% include file_url.html file="testing_manual" %}'>download the manual</a> ({% include file_meta.html file="testing_manual" %}).
         </p>
         <h2>Test Environment for Models</h2>
         <p>
@@ -42,16 +40,26 @@ In either case, a neutral, repeatable test environment helps to pin down the iss
 </p>
 <h3>Some other support materials are available:</h3>
 <ul>
-    {% for manual in site.data.manuals %}
     <li>
-        <a href="{{ manual.path }}">{{ manual.name }}</a>
-        {% if manual.description %}
-        -
-        {{ manual.description }}
-        {% endif %}
-        ({{ manual.date | date: "%d %B %Y" }})
+        A <a href="{% include file_url.html file="doc_german_keyboards" %}">guide for German keyboards</a>
+        ({% include file_meta.html file="doc_german_keyboards" %})
     </li>
-    {% endfor %}
+    <li>
+        <a href="{% include file_url.html file="doc_signaling" %}">Signaling - Operational Changes</a> which describes signaling in Open Rails
+        ({% include file_meta.html file="doc_signaling" %})
+    </li>
+    <li>
+        <a href="{% include file_url.html file="doc_trackviewer" %}">Open Rails Trackviewer</a> which maps the track and roads
+        ({% include file_meta.html file="doc_trackviewer" %})
+    </li>
+    <li>
+        <a href="{% include file_url.html file="doc_steam" %}">Steam Model</a> describing the physics in Open Rails
+        ({% include file_meta.html file="doc_steam" %})
+    </li>
+    <li>
+        <a href="{% include file_url.html file="doc_curves" %}">Speed Limits on Curves</a>
+        ({% include file_meta.html file="doc_curves" %})
+    </li>
 </ul>
     </div>
 </div>

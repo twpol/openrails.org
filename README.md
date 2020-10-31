@@ -6,12 +6,13 @@ GitHub Pages. It is already live on
 
 ### To-do list
 
-- [ ] Download pages and links
-- [ ] Investigate storage for large files (e.g. Git LFS)
-  - [ ] DemoModel1.zip
-  - [ ] Open Rails installer
+- [ ] Investigate storage for large files
+  - [ ] Installers, builds, and source code
   - [ ] PDF documents
-- [ ] Code changes
+  - [ ] DemoModel1.zip
+- [ ] Automate the publishing of new builds
+- [ ] Replace the changelog API
+- [ ] Track visitor hardware and software configurations
 
 ### Changes from the PHP version
 

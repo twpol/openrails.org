@@ -38,3 +38,7 @@ doc_curves:
   url: /assets/files/superelevation_v1.pdf
   date: 2014-06-03
   bytes: 126282
+content_demomodel1:
+  url: http://openrails.org/files/DemoModel1.zip
+  date: 2015-07-30
+  bytes: 253648854

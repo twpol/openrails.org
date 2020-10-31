@@ -1,10 +1,11 @@
+{%- for preamble in page.preambles -%}
 <!-- Modal -->
-<div id='{{ include.modal }}' class='modal fade' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+<div id='{{ preamble.modal }}' class='modal fade' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h2 class='modal-title'>{{ include.title }}</h2>
+        <h2 class='modal-title'>{{ preamble.title }}</h2>
       </div>
       <div class="modal-body">
         <p>
@@ -19,10 +20,11 @@
         </p><p>
           Or you can try out the 2 self-installing models on <a href="/">our home page</a> - both free of charge.
         </p><p class="text-right">
-          <a href="{% include file_url.html file=include.file %}" class="btn download_button">Download</a>
+          <a href="{% include file_url.html file=preamble.file %}" class="btn download_button">Download</a>
           <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-default cancel_button">Cancel</button>
         </p>
       </div><!-- End of Modal body -->
     </div><!-- End of Modal content -->
   </div><!-- End of Modal dialog -->
 </div><!-- End of Modal -->
+{%- endfor -%}

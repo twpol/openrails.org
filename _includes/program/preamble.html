@@ -19,7 +19,7 @@
         </p><p>
           Or you can try out the 2 self-installing models on <a href="/">our home page</a> - both free of charge.
         </p><p class="text-right">
-          <a href='/download/program/confirm.php?file={{ include.download_file }}' class='btn download_button'>Download</a>
+          <a href="{% include file_url.html file=include.file %}" class="btn download_button">Download</a>
           <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-default cancel_button">Cancel</button>
         </p>
       </div><!-- End of Modal body -->

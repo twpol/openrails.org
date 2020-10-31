@@ -6,7 +6,7 @@ stable_source:
   url: http://openrails.org/files/OpenRails-1.2-Source.zip
   date: 2017-01-22
   bytes: 33468761
-testing_installer:
+testing_build:
   url: http://openrails.org/files/OpenRails-Testing.zip
   date: 2020-09-30
   bytes: 46416514

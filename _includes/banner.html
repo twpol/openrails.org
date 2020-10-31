@@ -18,14 +18,15 @@ try {
 
 const show = () => {
     if (session === undefined)
-        return;
+        return false;
     const curImage = session.getItem("or_banner_image");
     const curTitle = session.getItem("or_banner_title");
     const curSupplier = session.getItem("or_banner_supplier");
     if ([curImage, curTitle, curSupplier].some(x => x === null))
-        return;
+        return false;
     banner.src = curImage;
     banner.title = `${curTitle}\nposted by ${curSupplier}`;
+    return true;
 };
 const loadJson = async (url) => new Promise((resolve, reject) => {
     const req = new XMLHttpRequest();
@@ -42,9 +43,9 @@ const loadJson = async (url) => new Promise((resolve, reject) => {
 /* Load the current banner, as stored in the cookies, immediately.
  * It takes a visibly long time for the browser to load the banner list,
  * even when it's already cached. */
-show();
-
+const showAgain = !show();
 const list = await loadJson("/assets/banners/banner_list.json");
+
 const pick = (l) => l[Math.floor(Math.random() * l.length)];
 const next = () => {
     if (session === undefined)
@@ -66,6 +67,11 @@ another.addEventListener("click", (e) => {
 });
 
 next();
+if (showAgain)
+{
+    show();
+    next();
+}
 })();
     </script>
   </div>

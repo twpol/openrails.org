@@ -47,6 +47,6 @@ doc_curves:
   date: 2014-06-03
   bytes: 126282
 content_demomodel1:
-  url: http://openrails.org/files/DemoModel1.zip
+  url: https://codeload.github.com/cjakeman/Demo-Model-1/zip/main
   date: 2015-07-30
-  bytes: 253648854
+  bytes: 252635806

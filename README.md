@@ -14,6 +14,16 @@ GitHub Pages. It is already live on
 - [ ] Replace the changelog API
 - [ ] Track visitor hardware and software configurations
 
+### Building and testing
+
+This website is built with Jekyll, and Jekyll requires Linux and Ruby. If you
+are on Windows (as is no doubt the case for you, an Open Rails developer), I
+suggest using Windows Subsystem for Linux to run Linux and
+[rbenv](https://github.com/rbenv/rbenv) to download and compile Ruby. Once Ruby
+is installed, you can run `gem install bundler` to install Bundler and then
+`bundle install` to install Jekyll and all its dependencies. Finally, use
+`bundle exec jekyll serve` to build this project and spin up a test server.
+
 ### Changes from the PHP version
 
 - We cannot read file sizes or modification times on GitHub Pages, so we 

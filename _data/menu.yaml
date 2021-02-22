@@ -33,6 +33,8 @@ toc:
         url: /learn/manual-and-tutorials/
       - page: OR Physics
         url: /learn/physics/
+      - page: Activities
+        url: /learn/activities/
   - title: Share
     subfolderitems:
       - page: Gallery
